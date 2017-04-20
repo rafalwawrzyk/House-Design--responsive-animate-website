@@ -7,7 +7,6 @@
   padding: 2%; }
 
 img {
-  height: 30%;
   max-width: 100%;
   margin: 0 auto; }
 
@@ -110,7 +109,8 @@ aside {
 .one-of-third {
   width: 29%;
   float: left;
-  margin: 2%; }
+  margin: 2%;
+  opacity: 0; }
 
 .one-of-third i {
   color: #e6e6e6;
@@ -250,3 +250,35 @@ a:hover, .current {
   p {
     font-size: 100%;
     margin: 2%; } }
+
+.rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0; }
+
+.rslides li {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 0; }
+
+.rslides li:first-child {
+  position: relative;
+  display: block;
+  float: left; }
+
+.rslides img {
+  display: block;
+  height: auto;
+  float: left;
+  width: 100%;
+  border: 0; }
+
+.animate {
+  opacity: 1;
+  transition: 3000ms ease; }

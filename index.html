@@ -6,12 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>LabCode - we make code</title>
-    <link href="css/jquery.bxslider.css" rel="stylesheet" />
+    <!--    <link href="css/jquery.bxslider.css" rel="stylesheet" />-->
+
     <link rel="stylesheet" type="text/css" href="style.css" />
+
     <link href="css/font-awesome.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="css/waypoints.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    
+<script src="js/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
+<script src="js/script.js"></script>
+<script src="ResponsiveSlides.js-master/responsiveslides.min.js"></script>
+
+
+
+
 </head>
 
 <body>
@@ -33,10 +45,10 @@
         </div>
     </header>
 
-    <script src="js/jquery.bxslider.min.js"></script>
+
     <div class="slider-container">
         <section class="slider">
-            <ul class="slider1">
+            <ul class="rslides">
                 <li><img src="img/FreeGreatPicture.com-53251-in-show-business-report-figure.jpg" alt=""></li>
                 <li><img src="img/smartphone-diary-and-silver-pen-on-black-workspace-desk-picjumbo-com.jpg" alt=""></li>
                 <li><img src="img/smartphone-diary-and-silver-pen-on-black-workspace-desk-picjumbo-com.jpg" alt=""></li>
@@ -45,31 +57,7 @@
         </section>
 
     </div>
-    <script type="text/javascript">
-        $('.slider1').bxSlider({
-            mode: 'fade',
-            captions: false,
-            auto: true,
-            pager: false,
 
-        });
-        $('.slider2').bxSlider({
-            pager: false,
-            captions: true,
-            maxSlides: 3,
-            minSlides: 1,
-            slideWidth: 230,
-            slideMargin: 10
-        });
-        $('.slider3').bxSlider({
-            mode: 'fade',
-            captions: false,
-            auto: true,
-            pager: false,
-            controls: false,
-        });
-
-    </script>
 
     <div class="clearfix"></div>
 
@@ -77,34 +65,37 @@
 
 
     <div id="in-wrapper">
-        <section class=one-of-third>
-           
+ 
+
+
+        <section class="one-of-third">
+
             <div class="circle">
                 <td><i class="fa fa-code"></i></td>
             </div>
             <h3>Coding</h3>
             <p>We are coding every time and everywhere. Creating webistes with newest technologies and we customize every project for our client. </p>
-            
+
         </section>
-        <section class=one-of-third>
-          
+        <section class="one-of-third animated">
+
             <div class="circle">
                 <td><i class="fa fa-codepen"></i></td>
             </div>
             <h3>Bootcamps</h3>
             <p>Every month we open a new programming bootcamps with to share our knowledge with everybody who wants to learn how to make beauty websites </p>
-            
+
         </section>
-        <section class=one-of-third>
-           
+        <section class="one-of-third animated">
+
             <div class="circle">
                 <td><i class="fa fa-github"></i></td>
             </div>
             <h3>Coding</h3>
             <p>If you wanna know how our code looks like, there is no problem. Check our work on Github. We don't have a secrets </p>
-            
+
         </section>
-        
+
         <article>
             <img class="image-circle" src="img/smartphone-diary-and-silver-pen-on-black-workspace-desk-picjumbo-com.jpg" alt="">
         </article>
@@ -145,7 +136,7 @@
         </section>
     </div>
     <div class="clearfix"></div>
-    
+
     <footer>
         <div id="footer">
             <section class="one-of-third" id="footer-third">
@@ -165,11 +156,10 @@
             <section class="one-of-third" id="footer-third-last">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2434.225716866632!2d16.92732871577089!3d52.40258527979217!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47045b3bfa9f77f3%3A0xb28eb924c8467f19!2zUMOzxYJ3aWVqc2thLCBQb3puYcWE!5e0!3m2!1spl!2spl!4v1492702189396" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
             </section>
-             <div class="clearfix"></div>
+            <div class="clearfix"></div>
         </div>
     </footer>
 
-  
 
 
 
@@ -177,6 +167,12 @@
 
 
 
+   
+    
+    
+    
+    
+    
 
 </body>
 

@@ -21,7 +21,12 @@
                     });
                 });
             }
+            
+            
+        
+})
 
             onScrollInit( $('.os-animation') );
             onScrollInit( $('.staggered-animation'), $('.staggered-animation-container') );
 });//]]>  
+
