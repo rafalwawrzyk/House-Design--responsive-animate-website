@@ -1,5 +1,10 @@
-$header-color: rgba(120, 161, 187, 0.8);
+$header-color: rgba(181, 45, 72, 0.9);
+$header-color-full:rgb(181, 45, 72);
 $header-color-mobile: rgb(120, 161, 187);
+$font-color:rgb(255, 252, 242);
+$dark-grey:rgb(255, 252, 242);
+$light-brown:rgb(191, 168, 158);
+$yellow:#FAFF70;
 * {
     box-sizing: border-box;
     padding: 0;
@@ -10,32 +15,31 @@ $header-color-mobile: rgb(120, 161, 187);
     padding: 2%;
 }
 
-.header-text{
-    position: absolute;
-    z-index: 500;
-    font-size:250%;
-    margin-left: auto;
-margin-right: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-   box-shadow:         4px 4px 27px 0px rgba(94, 50, 50, 0.57);
-left: 0;
-right: 0;
-top:30%;
-    color:rgb(40, 48, 68);
-    max-height: 30%;
-    max-width: 80%;
-    background-color: rgba(235, 245, 238,0.9);
-    border-radius: 15px;
-    h1{
-        position: relative;
-        padding: 10px;
-        font-style: italic;
-    }
-    
-}
-
+//.header-text{
+//    position: absolute;
+//    z-index: 500;
+//    font-size:250%;
+//    margin-left: auto;
+//margin-right: auto;
+//    display: flex;
+//    justify-content: center;
+//    align-items: center;
+//   box-shadow:         4px 4px 27px 0px rgba(94, 50, 50, 0.57);
+//left: 0;
+//right: 0;
+//top:30%;
+//    color:rgb(40, 48, 68);
+//    max-height: 30%;
+//    max-width: 80%;
+//    background-color: rgba(235, 245, 238,0.9);
+//    border-radius: 15px;
+//    h1{
+//        position: relative;
+//        padding: 10px;
+//        font-style: italic;
+//    }
+//    
+//}
 img {
     //    height: 30%;
     max-width: 100%;
@@ -50,6 +54,7 @@ body {
     text-transform: uppercase;
     box-sizing: border-box;
     margin: 0 auto;
+    background-color: $dark-grey;
 }
 
 h3 {
@@ -69,7 +74,7 @@ header {
     z-index: 1000;
     width: 100%;
     top: 0;
-    box-shadow:         2px 1px 30px 0px rgba(255, 74, 50, 0.26);
+    box-shadow: 2px 1px 30px 0px rgba(255, 74, 50, 0.26);
 }
 
 #logo h3 {
@@ -77,8 +82,8 @@ header {
     color: white;
     float: left;
     vertical-align: middle;
-    text-shadow: 1px 1px 1px rgb(191, 191, 191);
-    margin-left: 10px
+    margin-left: 10px;
+    font-size: 200%;
 }
 
 #header-main {
@@ -114,13 +119,49 @@ nav ul li {
     padding: 10px;
     float: left;
     font-size: 110%;
+    position: relative;
 }
 
 nav ul li a {
     text-decoration: none;
     color: #e6e6e6;
-    font-weight: 700;
     font-size: 100%;
+    position: relative;
+    display: inline-block;
+    cursor: pointer
+}
+
+@for $i from 1 through 5 {
+    nav ul li:nth-child(#{$i}) {
+        &:hover {
+            font-weight: bold;
+            &:after {
+                width: 30px;
+                height: 1px;
+                position: absolute;
+                background-color: $yellow;
+                content: "";
+                left: 8px;
+                top: 20px;
+                animation-name: lineAnim;
+                animation-duration: 0.6s;
+                animation-delay: 0s;
+                animation-fill-mode: forwards;
+                animation-timing-function: ease-in-out;
+                //            animation-iteration-count: infinite;
+            }
+        }
+    }
+    @keyframes lineAnim {
+        0% {
+            width: 0px;
+            opacity: 0;
+        }
+        100% {
+            width: 100%;
+            opacity: 1;
+        }
+    }
 }
 
 h5 {
@@ -140,44 +181,41 @@ article {
     float: left;
     width: 50%;
     opacity: 0;
-   
-    
-    }
-    @keyframes circleMove {
-        0% {
-            transform: translate3d(-500px, 0px, 0px);
-            opacity: 0;
-            
-        }
-        100% {
-            transform: translate3d(0, 0px, 0px);
-            opacity: 1;
-            
-        }
-    }
+}
 
-.article-animate{
+@keyframes circleMove {
+    0% {
+        transform: translate3d(-500px, 0px, 0px);
+        opacity: 0;
+    }
+    100% {
+        transform: translate3d(0, 0px, 0px);
+        opacity: 1;
+    }
+}
+
+.article-animate {
     animation-name: circleMove;
-        animation-delay: 0s;
-        animation-duration: 1s;
-        animation-fill-mode: forwards;
-        animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
 }
 
 aside {
     opacity: 0;
     float: right;
     width: 35%;
-    padding: 2%;
+    padding: 4%;
     text-align: center;
-    
+    margin-right: 100px;
     h3 {
         text-decoration: underline;
         margin-left: 10px;
     }
 }
 
-.aside-animate{
+.aside-animate {
     animation-name: asideMove;
     animation-delay: 0s;
     animation-duration: 1s;
@@ -197,9 +235,7 @@ aside {
 }
 
 .image-circle {
-    border-radius: 50%;
-    
-    
+    border-radius: 6px;
 }
 
 #in-wrapper {
@@ -236,7 +272,6 @@ h5 a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-   
 }
 
 .one-third-img {
@@ -244,9 +279,12 @@ h5 a:hover {
 }
 
 footer {
-    background-color: rgba(191, 168, 158, 0.7);
+    background-color: $header-color;
     height: 100%;
     overflow: hidden;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin-bottom: 0;
 }
 
 #footer {
@@ -255,11 +293,11 @@ footer {
 }
 
 footer h3 {
-    color: #656565;
+    color: $dark-grey;
 }
 
 footer p {
-    color: #656565;
+    color: $dark-grey;
     text-align: center;
 }
 
@@ -269,24 +307,50 @@ footer .one-of-third {
 }
 
 footer a {
-    color: #959595;
+    color: $dark-grey;
+    ;
 }
 
 .social-media li {
     display: inline;
 }
 
+.facebook {
+    transition: color .5s linear;
+    &:hover {
+        color: #3B5998;
+    }
+}
+
+.twitter {
+    transition: color .5s linear;
+    &:hover {
+        color: #00aced;
+    }
+}
+
+.google{
+    transition: color .5s linear;
+    &:hover {
+        color:  #d34836;
+    }
+}
+
+.youtube{
+    transition: color .5s linear;
+    display: block;
+    &:hover {
+        color:  #e52d27;
+        
+    }
+}
+
 .social-media i {
     font-size: 355%;
     padding: 2% 6%;
     padding-bottom: 60px;
-    text-shadow: 4px 4px 2px rgba(150, 150, 150, 1);
-    &:hover {
-        color: #ffffff;
-    }
 }
 
-a:hover,
 .current {
     text-decoration: underline;
 }
@@ -295,6 +359,7 @@ a:hover,
     margin-top: 84px;
     position: relative;
 }
+
 
 .bx-controls {
     display: none;
@@ -317,20 +382,18 @@ a:hover,
 }
 
 @media screen and (max-width:840px) {
-    h1{
+    h1 {
         font-size: 100%;
     }
 }
 
-
 @media screen and (max-width:768px) {
-    h1{
+    h1 {
         font-size: 70%;
     }
-    
     header {
         position: absolute;
-        background-color: $header-color-mobile;
+        background-color: $header-color;
     }
     #menu-icons {
         display: inline-block;
@@ -341,7 +404,7 @@ a:hover,
         visibility: hidden;
         z-index: 1000;
         position: absolute;
-        background-color: $header-color-mobile;
+        background-color: $header-color-full;
         width: 100%;
         padding: 20px;
         right: 0;
@@ -371,37 +434,31 @@ a:hover,
         padding: 0;
         margin: 0;
     }
-
-
-aside {
-    width: 100%;
+    aside {
+        width: 100%;
+        margin-right: 0;
+        
+    }
+    h4 {
+        font-size: 140%;
+    }
+    footer .one-of-third {
+        width: 100%;
+        margin: 0;
+    }
 }
 
-h4 {
-    font-size: 140%;
-}
-
-footer .one-of-third {
-    width: 100%;
-    margin: 0;
-}
-
-
-}
 @media screen and (max-width: 478px) {
     h3 {
         font-size: 150%;
     }
-    
     p {
         font-size: 100%;
         margin: 2%;
     }
-    
-    h1{
-        font-size:60%;
+    h1 {
+        font-size: 60%;
     }
-    
     #menu-icons i {
         font-size: 30px;
         color: #ffffff;
@@ -409,6 +466,7 @@ footer .one-of-third {
         margin-left: 60px
     }
 }
+
 .rslides {
     position: relative;
     list-style: none;
@@ -417,6 +475,7 @@ footer .one-of-third {
     padding: 0;
     margin: 0;
 }
+
 .rslides li {
     -webkit-backface-visibility: hidden;
     position: absolute;
@@ -425,18 +484,21 @@ footer .one-of-third {
     left: 0;
     top: 0;
 }
+
 .rslides li:first-child {
     position: relative;
     display: block;
     float: left;
 }
+
 .rslides img {
     display: block;
-    height: auto;
+    height: 90vh;
     float: left;
     width: 100%;
     border: 0;
 }
+
 //.animate{
 //    opacity:1;
 //    transition: 3000ms ease;
@@ -446,6 +508,7 @@ footer .one-of-third {
     visibility: visible;
     transition: 300ms ease-in-out;
 }
+
 .anime {
     opacity: 0;
     animation-name: boxIco;
@@ -463,26 +526,23 @@ footer .one-of-third {
         animation-fill-mode: forwards;
     }
 }
+
 @keyframes boxIco {
     0% {
         opacity: 0;
     }
-    
     100% {
         opacity: 1;
     }
 }
 
-
 @keyframes iAnimate {
     0% {
         transform: scale(0);
     }
-    
     50% {
         transform: scale(1.5);
     }
-    
     100% {
         transform: scale(1);
     }
