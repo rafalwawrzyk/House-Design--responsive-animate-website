@@ -1,3 +1,7 @@
+$header-color: rgba(120, 161, 187,0.8);
+$header-color-mobile: rgb(120, 161, 187);
+
+
 *{
     box-sizing: border-box;
     padding: 0;
@@ -37,7 +41,7 @@ h4{
 }
 
 header{
-    background-color: rgba(255, 103, 8, 0.8);
+    background-color: $header-color;
     height:84px;
     position: fixed;
     z-index: 1000;
@@ -67,12 +71,17 @@ nav{
 }
 
 #menu-icons{
-    background-image: url(img/icon.png) center;
     width:100px;
     height: 74px;
     display: none;
     margin-top: 10px
-    
+}
+
+#menu-icons i{
+    font-size: 30px;
+    color:#ffffff;
+    margin-top: -15px;
+    margin-left: 60px
 }
 
 ul{
@@ -255,29 +264,29 @@ a:hover, .current{
 @media screen and (max-width:768px){
     header{
         position:absolute;
+        background-color:$header-color-mobile;
+        
     }
     #menu-icons{
         display: inline-block;
     }
-    nav:hover ul{
-        display: block;
-    }
+   
     nav ul, nav:active ul{
         display: none;
         z-index: 1000;
         position: absolute;
-        background-color:rgba(255, 103, 8, 0.8);
-        width:50%;
+        background-color:$header-color-mobile;
+        width:100%;
         padding: 20px;
-        right:20px;
+        right:0;
         top:60px;
-        border: 1px solid #fff;
         border-radius: 4px 0 4px 4px;
     }
     nav li{
-       text-align: center;
+        text-align: center;
         width: 100%;
         margin-bottom: 20px;
+        margin-top: 20px;
     }
     .one-of-third{
         width:100%;
@@ -317,6 +326,12 @@ a:hover, .current{
         font-size: 100%;
         margin:2%;
     }
+    #menu-icons i{
+    font-size: 30px;
+    color:#ffffff;
+    margin-top: -15px;
+    margin-left: 60px
+}
 }
 
 
@@ -357,4 +372,6 @@ a:hover, .current{
     opacity:1;
     transition: 3000ms ease;
 }
+
+
 

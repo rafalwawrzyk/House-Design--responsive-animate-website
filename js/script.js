@@ -34,6 +34,28 @@ $(".rslides").responsiveSlides({
   before: function(){},   // Function: Before callback
   after: function(){}     // Function: After callback
 });
+//nav ul, nav:active ul
 
-
+    
+    $hamburger = $('#menu-icons i');
+    $dropMenu = $('nav ul, nav:active ul');
+    
+    $hamburger.on('click', function(){
+        $dropMenu.slideToggle('slow');
+    })
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 })
