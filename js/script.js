@@ -6,7 +6,25 @@ var $waypoint = $('#in-wrapper');
 $waypoint.waypoint(function(){
     $('#in-wrapper > .one-of-third').addClass('anime');
     
-},{offset: '50%'})
+},{offset: '70%'})
+
+var $article = $('article');
+var $aside = $('aside');
+
+$waypoint.waypoint(function(){
+    $article.addClass('article-animate');
+    
+},{offset:'0%'})
+
+$waypoint.waypoint(function(){
+    $aside.addClass('aside-animate');
+    
+},{offset:'0%'})
+
+//$('.image-circle').waypoint(function(){
+//    $('article').addClass('.article-animate');
+//    
+//},{offset: '40%'})
     
     
     
