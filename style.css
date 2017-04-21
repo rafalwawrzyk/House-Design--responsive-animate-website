@@ -52,8 +52,6 @@ nav {
   padding: 20px 20px 0 0; }
 
 #menu-icons {
-  width: 100px;
-  height: 74px;
   display: none;
   margin-top: 10px; }
 
@@ -213,7 +211,8 @@ a:hover, .current {
   #menu-icons {
     display: inline-block; }
   nav ul, nav:active ul {
-    display: none;
+    opacity: 0;
+    visibility: hidden;
     z-index: 1000;
     position: absolute;
     background-color: #78a1bb;
@@ -293,4 +292,6 @@ a:hover, .current {
   transition: 3000ms ease; }
 
 .block {
-  display: block; }
+  opacity: 1;
+  visibility: visible;
+  transition: 300ms ease-in-out; }
