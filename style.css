@@ -143,7 +143,7 @@ h5 a:hover {
   padding-bottom: 2%; }
 
 footer {
-  background-color: rgba(195, 195, 195, 0.8);
+  background-color: rgba(191, 168, 158, 0.7);
   height: 100%;
   overflow: hidden; }
 
@@ -295,3 +295,59 @@ a:hover, .current {
   opacity: 1;
   visibility: visible;
   transition: 300ms ease-in-out; }
+
+#in-wrapper > .one-of-third {
+  opacity: 0;
+  -webkit-animation-name: boxIco;
+  animation-name: boxIco;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+  -webkit-animation-direction: normal;
+  animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out; }
+  #in-wrapper > .one-of-third i {
+    -webkit-animation-name: iAnimate;
+    animation-name: iAnimate;
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+    -webkit-animation-direction: normal;
+    animation-direction: normal;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards; }
+
+@-webkit-keyframes boxIco {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes boxIco {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes iAnimate {
+  0% {
+    font-size: 0px; }
+  70% {
+    font-size: 90px; }
+  100% {
+    font-size: 80px; } }
+
+@keyframes iAnimate {
+  0% {
+    font-size: 0px; }
+  70% {
+    font-size: 90px; }
+  100% {
+    font-size: 80px; } }

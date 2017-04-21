@@ -186,7 +186,7 @@ h5 a:hover{
 
 
 footer{
-    background-color: rgba(195, 195, 195, 0.8);
+    background-color: rgba(191, 168, 158, 0.7);
     height: 100%;
     overflow: hidden;
 }
@@ -379,3 +379,48 @@ a:hover, .current{
     visibility: visible;
     transition: 300ms ease-in-out;
 }
+
+#in-wrapper > .one-of-third{
+    opacity: 0;
+    animation-name: boxIco;
+    animation-delay: 0s;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    i{
+        animation-name: iAnimate;
+        animation-delay: 0s;
+        animation-direction: normal;
+        animation-duration: 1s;
+        animation-timing-function:ease-in;
+        animation-fill-mode: forwards;
+            
+        
+    }
+}
+
+@keyframes boxIco{
+    0%{
+        opacity: 0;
+        
+    }
+    100%{
+        opacity: 1;
+        
+    }
+}
+
+@keyframes iAnimate{
+    0%{
+        font-size: 0px;
+    }
+    
+    70%{
+        font-size: 90px;
+    }
+    100%{
+        font-size: 80px;
+    }
+}
+
