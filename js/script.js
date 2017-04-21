@@ -41,12 +41,10 @@ $(".rslides").responsiveSlides({
     $dropMenu = $('nav ul, nav:active ul');
     
     $hamburger.on('click', function(){
-        $dropMenu.slideToggle('slow');
+        $dropMenu.toggleClass('block');
     })
     
-    
-    
-    
+   
     
     
     

@@ -291,3 +291,6 @@ a:hover, .current {
 .animate {
   opacity: 1;
   transition: 3000ms ease; }
+
+.block {
+  display: block; }
