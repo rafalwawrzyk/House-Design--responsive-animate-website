@@ -1,12 +1,11 @@
 $(function(){
     
 
-var $dupa = $('#in-wrapper');
+var $waypoint = $('#in-wrapper');
 
-$dupa.waypoint(function(){
-    $('.one-of-third:nth-child(1)').addClass('animate');
-    $('.one-of-third:nth-child(2)').addClass('fadeInDown')
-    $('.one-of-third:nth-child(3)').addClass('fadeInRight')
+$waypoint.waypoint(function(){
+    $('#in-wrapper > .one-of-third').addClass('anime');
+    
 },{offset: '50%'})
     
     
