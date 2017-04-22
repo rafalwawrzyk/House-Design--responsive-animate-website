@@ -17,8 +17,7 @@ body {
   text-align: center;
   text-transform: uppercase;
   box-sizing: border-box;
-  margin: 0 auto;
-  background-color: #fffcf2; }
+  margin: 0 auto; }
 
 h3 {
   font-size: 190%;
@@ -29,7 +28,7 @@ h4 {
   padding: 5% 0; }
 
 header {
-  background-color: rgba(181, 45, 72, 0.9);
+  background-color: #eaeaea;
   height: 84px;
   position: fixed;
   z-index: 1000;
@@ -39,11 +38,18 @@ header {
 
 #logo h3 {
   text-decoration: none;
-  color: white;
+  color: #5c5c5c;
   float: left;
   vertical-align: middle;
   margin-left: 10px;
-  font-size: 200%; }
+  font-size: 120%;
+  text-align: justify;
+  line-height: 16px;
+  margin-top: 24px;
+  padding: 3px; }
+
+.design {
+  color: crimson; }
 
 #header-main {
   max-width: 1400px;
@@ -77,7 +83,7 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: #e6e6e6;
+  color: #5c5c5c;
   font-size: 100%;
   position: relative;
   display: inline-block;
@@ -87,9 +93,9 @@ nav ul li:nth-child(1):hover {
   font-weight: bold; }
   nav ul li:nth-child(1):hover:after {
     width: 30px;
-    height: 1px;
+    height: 2px;
     position: absolute;
-    background-color: #FAFF70;
+    background-color: #0098ff;
     content: "";
     left: 8px;
     top: 20px;
@@ -124,9 +130,9 @@ nav ul li:nth-child(2):hover {
   font-weight: bold; }
   nav ul li:nth-child(2):hover:after {
     width: 30px;
-    height: 1px;
+    height: 2px;
     position: absolute;
-    background-color: #FAFF70;
+    background-color: #0098ff;
     content: "";
     left: 8px;
     top: 20px;
@@ -153,9 +159,9 @@ nav ul li:nth-child(3):hover {
   font-weight: bold; }
   nav ul li:nth-child(3):hover:after {
     width: 30px;
-    height: 1px;
+    height: 2px;
     position: absolute;
-    background-color: #FAFF70;
+    background-color: #0098ff;
     content: "";
     left: 8px;
     top: 20px;
@@ -182,9 +188,9 @@ nav ul li:nth-child(4):hover {
   font-weight: bold; }
   nav ul li:nth-child(4):hover:after {
     width: 30px;
-    height: 1px;
+    height: 2px;
     position: absolute;
-    background-color: #FAFF70;
+    background-color: #0098ff;
     content: "";
     left: 8px;
     top: 20px;
@@ -211,9 +217,9 @@ nav ul li:nth-child(5):hover {
   font-weight: bold; }
   nav ul li:nth-child(5):hover:after {
     width: 30px;
-    height: 1px;
+    height: 2px;
     position: absolute;
-    background-color: #FAFF70;
+    background-color: #0098ff;
     content: "";
     left: 8px;
     top: 20px;
@@ -292,8 +298,27 @@ aside {
   text-align: center;
   margin-right: 100px; }
   aside h3 {
-    text-decoration: underline;
-    margin-left: 10px; }
+    text-decoration: none;
+    margin-left: 10px;
+    position: relative; }
+    aside h3:after {
+      width: 0px;
+      height: 2px;
+      position: absolute;
+      background-color: #0098ff;
+      content: "";
+      left: 8px;
+      top: 33px;
+      -webkit-animation-name: lineAnim;
+      animation-name: lineAnim;
+      -webkit-animation-duration: 0.6s;
+      animation-duration: 0.6s;
+      -webkit-animation-delay: 1s;
+      animation-delay: 1s;
+      -webkit-animation-fill-mode: forwards;
+      animation-fill-mode: forwards;
+      -webkit-animation-timing-function: ease-in-out;
+      animation-timing-function: ease-in-out; }
 
 .aside-animate {
   -webkit-animation-name: asideMove;
@@ -345,6 +370,10 @@ aside {
   color: #e6e6e6;
   font-size: 80px; }
 
+.one-of-third img {
+  height: 400px;
+  width: 100%; }
+
 h5 a:hover {
   text-decoration: none;
   color: #405580; }
@@ -369,7 +398,7 @@ h5 a:hover {
   padding-bottom: 2%; }
 
 footer {
-  background-color: rgba(181, 45, 72, 0.9);
+  background-color: #eaeaea;
   height: 100%;
   overflow: hidden;
   border-top-left-radius: 5px;
@@ -381,10 +410,10 @@ footer {
   margin: 0 auto; }
 
 footer h3 {
-  color: #fffcf2; }
+  color: #5c5c5c; }
 
 footer p {
-  color: #fffcf2;
+  color: #5c5c5c;
   text-align: center; }
 
 footer .one-of-third {
@@ -392,7 +421,7 @@ footer .one-of-third {
   margin: 2% 0; }
 
 footer a {
-  color: #fffcf2; }
+  color: #5c5c5c; }
 
 .social-media li {
   display: inline; }
@@ -421,13 +450,13 @@ footer a {
 .social-media i {
   font-size: 355%;
   padding: 2% 6%;
-  padding-bottom: 60px; }
+  padding-bottom: 60px;
+  color: #ffffff; }
 
 .current {
   text-decoration: underline; }
 
 .slider {
-  margin-top: 84px;
   position: relative; }
 
 .bx-controls {
@@ -461,7 +490,7 @@ footer a {
     font-size: 70%; }
   header {
     position: absolute;
-    background-color: rgba(181, 45, 72, 0.9); }
+    background-color: #eaeaea; }
   #menu-icons {
     display: inline-block; }
   nav ul,
@@ -470,7 +499,7 @@ footer a {
     visibility: hidden;
     z-index: 1000;
     position: absolute;
-    background-color: #b52d48;
+    background-color: #eaeaea;
     width: 100%;
     padding: 20px;
     right: 0;
@@ -485,6 +514,9 @@ footer a {
     width: 100%;
     text-align: center;
     margin: 0; }
+  .one-of-third img {
+    height: auto;
+    width: 100%; }
   .circle {
     width: 100px;
     height: 100px; }
@@ -540,10 +572,11 @@ footer a {
 
 .rslides img {
   display: block;
-  height: 90vh;
+  height: 100%;
   float: left;
   width: 100%;
-  border: 0; }
+  border: 0;
+  height: 100vh; }
 
 .block {
   opacity: 1;
