@@ -252,6 +252,7 @@ aside {
 
 .image-circle {
     border-radius: 6px;
+    box-shadow: 10px 10px 49px 0px rgba(143,143,143,1);
 }
 
 #in-wrapper {
@@ -670,7 +671,10 @@ footer a {
     }
 }
 
-
+.houses-img img{
+    box-shadow: 10px 10px 49px 0px rgba(143,143,143,1);
+    border-radius: 8px;
+}
 
 
 .spinner {

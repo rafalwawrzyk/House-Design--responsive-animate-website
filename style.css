@@ -333,7 +333,8 @@ aside {
     opacity: 1; } }
 
 .image-circle {
-  border-radius: 6px; }
+  border-radius: 6px;
+  box-shadow: 10px 10px 49px 0px #8f8f8f; }
 
 #in-wrapper {
   max-width: 1200px;
@@ -701,6 +702,10 @@ footer a {
     background-color: rgba(237, 237, 237, 0.5);
     width: 150px;
     text-align: center; }
+
+.houses-img img {
+  box-shadow: 10px 10px 49px 0px #8f8f8f;
+  border-radius: 8px; }
 
 .spinner {
   width: 80px;
