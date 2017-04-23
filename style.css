@@ -11,7 +11,7 @@ img {
   margin: 0 auto; }
 
 body {
-  color: #242424;
+  color: #5c5c5c;
   font-family: 'Bitter', serif;
   line-height: 190%;
   text-align: center;
@@ -297,28 +297,6 @@ aside {
   padding: 4%;
   text-align: center;
   margin-right: 100px; }
-  aside h3 {
-    text-decoration: none;
-    margin-left: 10px;
-    position: relative; }
-    aside h3:after {
-      width: 0px;
-      height: 2px;
-      position: absolute;
-      background-color: #0098ff;
-      content: "";
-      left: 8px;
-      top: 33px;
-      -webkit-animation-name: lineAnim;
-      animation-name: lineAnim;
-      -webkit-animation-duration: 0.6s;
-      animation-duration: 0.6s;
-      -webkit-animation-delay: 1s;
-      animation-delay: 1s;
-      -webkit-animation-fill-mode: forwards;
-      animation-fill-mode: forwards;
-      -webkit-animation-timing-function: ease-in-out;
-      animation-timing-function: ease-in-out; }
 
 .aside-animate {
   -webkit-animation-name: asideMove;
@@ -644,3 +622,70 @@ footer a {
   100% {
     -webkit-transform: scale(1);
     transform: scale(1); } }
+
+.about, .facility, .pricing {
+  padding: 0px;
+  margin-bottom: 0px;
+  font-size: 150%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  float: left;
+  margin-left: 10px; }
+  .about p, .facility p, .pricing p {
+    position: relative; }
+    .about p:after, .facility p:after, .pricing p:after {
+      width: 0px;
+      height: 2px;
+      position: absolute;
+      background-color: #0098ff;
+      content: "";
+      left: 0px;
+      top: 33px;
+      -webkit-animation-name: lineAnim;
+      animation-name: lineAnim;
+      -webkit-animation-duration: 0.6s;
+      animation-duration: 0.6s;
+      -webkit-animation-delay: 1s;
+      animation-delay: 1s;
+      -webkit-animation-fill-mode: forwards;
+      animation-fill-mode: forwards;
+      -webkit-animation-timing-function: ease-in-out;
+      animation-timing-function: ease-in-out; }
+
+#footer-third h3 {
+  position: relative;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto; }
+  #footer-third h3:after {
+    width: 0px;
+    height: 2px;
+    position: absolute;
+    background-color: #0098ff;
+    content: "";
+    left: 0px;
+    top: 33px;
+    -webkit-animation-name: lineAnim;
+    animation-name: lineAnim;
+    -webkit-animation-duration: 0.6s;
+    animation-duration: 0.6s;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out; }
+
+::-webkit-scrollbar {
+  width: 6px;
+  /* for vertical scrollbars */
+  height: 8px;
+  /* for horizontal scrollbars */ }
+
+::-webkit-scrollbar-track {
+  background: transparent; }
+
+::-webkit-scrollbar-thumb {
+  background: #0098ff; }
