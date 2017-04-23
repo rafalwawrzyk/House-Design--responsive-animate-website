@@ -5,14 +5,16 @@ var $waypoint = $('#in-wrapper');
 
 $waypoint.waypoint(function(){
     $('#in-wrapper > .one-of-third').addClass('anime');
+    $('.about').addClass('animated-header')
     
-},{offset: '70%'})
+},{offset: '90%'})
 
 var $article = $('article');
 var $aside = $('aside');
 
 $waypoint.waypoint(function(){
     $article.addClass('article-animate');
+    $('.facility').addClass('animated-header');
     
 },{offset:'0%'})
 
@@ -21,10 +23,14 @@ $waypoint.waypoint(function(){
     
 },{offset:'0%'})
 
-//$('.image-circle').waypoint(function(){
-//    $('article').addClass('.article-animate');
-//    
-//},{offset: '40%'})
+$('.facility').waypoint(function(){
+    $('.pricing').addClass('animated-header');
+    
+},{offset:'0%'})
+
+
+
+
     
     
     

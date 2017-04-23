@@ -633,26 +633,27 @@ footer a {
   width: auto;
   float: left;
   margin-left: 10px; }
-  .about p, .facility p, .pricing p {
-    position: relative; }
-    .about p:after, .facility p:after, .pricing p:after {
-      width: 0px;
-      height: 2px;
-      position: absolute;
-      background-color: #0098ff;
-      content: "";
-      left: 0px;
-      top: 33px;
-      -webkit-animation-name: lineAnim;
-      animation-name: lineAnim;
-      -webkit-animation-duration: 0.6s;
-      animation-duration: 0.6s;
-      -webkit-animation-delay: 1s;
-      animation-delay: 1s;
-      -webkit-animation-fill-mode: forwards;
-      animation-fill-mode: forwards;
-      -webkit-animation-timing-function: ease-in-out;
-      animation-timing-function: ease-in-out; }
+
+.animated-header p {
+  position: relative; }
+  .animated-header p:after {
+    width: 0px;
+    height: 2px;
+    position: absolute;
+    background-color: #0098ff;
+    content: "";
+    left: 0px;
+    top: 33px;
+    -webkit-animation-name: lineAnim;
+    animation-name: lineAnim;
+    -webkit-animation-duration: 0.6s;
+    animation-duration: 0.6s;
+    -webkit-animation-delay: 200ms;
+    animation-delay: 200ms;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out; }
 
 #footer-third h3 {
   position: relative;

@@ -592,7 +592,12 @@ footer a {
     width: auto;
     float: left;
     margin-left: 10px;
-    p{
+   
+    }
+
+
+.animated-header{
+     p{
         position: relative;
         &:after{
                 width: 0px;
@@ -604,12 +609,12 @@ footer a {
                 top:33px;
                 animation-name: lineAnim;
                 animation-duration: 0.6s;
-                animation-delay: 1s;
+                animation-delay: 200ms;
                 animation-fill-mode: forwards;
                 animation-timing-function: ease-in-out;
         }
     }
-    }
+}
 
 #footer-third h3{
     position: relative;
