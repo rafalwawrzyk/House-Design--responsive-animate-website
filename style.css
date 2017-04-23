@@ -694,8 +694,31 @@ footer a {
 ::-webkit-scrollbar-thumb {
   background: #0098ff; }
 
+.animated-house-img {
+  -webkit-animation-name: houseImgAnim;
+  animation-name: houseImgAnim;
+  -webkit-animation-duration: 1000ms;
+  animation-duration: 1000ms;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-timing-function: ease-in;
+  animation-timing-function: ease-in; }
+
+@-webkit-keyframes houseImgAnim {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes houseImgAnim {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
 .houses-img {
-  position: relative; }
+  position: relative;
+  opacity: 0; }
   .houses-img p {
     position: absolute;
     top: 0px;

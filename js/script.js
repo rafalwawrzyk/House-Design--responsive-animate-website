@@ -25,8 +25,12 @@ $waypoint.waypoint(function(){
 
 $('.facility').waypoint(function(){
     $('.pricing').addClass('animated-header');
+    $('.houses-img').addClass('animated-house-img');
     
 },{offset:'0%'})
+
+
+
 
 
 
