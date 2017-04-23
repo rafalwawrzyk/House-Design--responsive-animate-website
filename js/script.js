@@ -30,10 +30,24 @@ $('.facility').waypoint(function(){
 
 
 
+////overlay
+
+//var overlay = document.getElementById('spinner-page')
+//    
+//window.addEventListener('load', function(){
+//    overlay.style.display = 'none';
+//})
+
+
+var $overlay = $('#spinner-page');
+
+$(window).on('load',function(){
+    $overlay.hide();
+});
 
     
     
-    
+    ////
 $(function() {
     $(".rslides").responsiveSlides();
   });

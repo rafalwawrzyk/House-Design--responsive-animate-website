@@ -54,6 +54,9 @@ font-family: 'Bitter', serif;
     text-transform: uppercase;
     box-sizing: border-box;
     margin: 0 auto; 
+    overflow-x: hidden;
+  overflow-y: scroll;
+    
 }
 
 h3 {
@@ -272,7 +275,7 @@ aside {
 }
 
 .one-of-third img{
-    height: 400px;
+    height: 340px;
     width: 100%;
 }
 
@@ -655,3 +658,60 @@ footer a {
 {
   background: #0098ff;
 }
+
+.houses-img{
+    position: relative;
+    p{
+        position: absolute;
+        top:0px;
+        background-color: rgba(237, 237, 237, 0.5);
+        width: 150px;
+        text-align: center;
+    }
+}
+
+
+
+
+.spinner {
+    width: 80px;
+    height: 80px;
+    border: 2px solid white;
+    border-top:3px solid red;
+    border-radius:100%;
+    z-index: 2000;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left:0;
+    right:0;
+    margin: auto;
+    animation-name: spinner;
+    animation-delay: 0s;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes spinner {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+#spinner-page{
+    height: 100%;
+    width: 100%;
+//    background-color: rgba(0, 152, 255, 0.6);
+    position: fixed;
+    left: 0;
+    top:0;
+    z-index: 9999;
+}
+
+
+
+

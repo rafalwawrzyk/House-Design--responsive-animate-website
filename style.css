@@ -17,7 +17,9 @@ body {
   text-align: center;
   text-transform: uppercase;
   box-sizing: border-box;
-  margin: 0 auto; }
+  margin: 0 auto;
+  overflow-x: hidden;
+  overflow-y: scroll; }
 
 h3 {
   font-size: 190%;
@@ -349,7 +351,7 @@ aside {
   font-size: 80px; }
 
 .one-of-third img {
-  height: 400px;
+  height: 340px;
   width: 100%; }
 
 h5 a:hover {
@@ -690,3 +692,58 @@ footer a {
 
 ::-webkit-scrollbar-thumb {
   background: #0098ff; }
+
+.houses-img {
+  position: relative; }
+  .houses-img p {
+    position: absolute;
+    top: 0px;
+    background-color: rgba(237, 237, 237, 0.5);
+    width: 150px;
+    text-align: center; }
+
+.spinner {
+  width: 80px;
+  height: 80px;
+  border: 2px solid white;
+  border-top: 3px solid red;
+  border-radius: 100%;
+  z-index: 2000;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  -webkit-animation-name: spinner;
+  animation-name: spinner;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite; }
+
+@-webkit-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+#spinner-page {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9999; }
