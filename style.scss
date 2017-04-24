@@ -48,15 +48,14 @@ img {
 
 body {
     color: $font-color;
-font-family: 'Bitter', serif;
+    font-family: 'Bitter', serif;
     line-height: 190%;
     text-align: center;
     text-transform: uppercase;
     box-sizing: border-box;
-    margin: 0 auto; 
+    margin: 0 auto;
     overflow-x: hidden;
-  overflow-y: scroll;
-    
+    overflow-y: scroll;
 }
 
 h3 {
@@ -79,8 +78,6 @@ header {
     box-shadow: 2px 1px 30px 0px rgba(255, 74, 50, 0.26);
 }
 
-
-
 #logo h3 {
     text-decoration: none;
     color: #5c5c5c;
@@ -92,17 +89,11 @@ header {
     line-height: 16px;
     margin-top: 24px;
     padding: 3px;
-    
-    
-    
 }
 
-
-
-.design{
-    color:crimson;
+.design {
+    color: crimson;
 }
-
 
 #header-main {
     max-width: 1400px;
@@ -199,6 +190,7 @@ article {
     float: left;
     width: 50%;
     opacity: 0;
+    margin-top: 5px;
 }
 
 @keyframes circleMove {
@@ -224,12 +216,111 @@ aside {
     opacity: 0;
     float: right;
     width: 35%;
-    padding: 4%;
+    padding: 3%;
     text-align: center;
     margin-right: 100px;
-    
-    }
+    position: relative;
+    border: 1px solid rgb(92, 92, 92);
+    position: relative;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+}
 
+aside:hover {
+    border: 1px solid transparent;
+    transition: 1000ms ease-in;
+}
+
+aside::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 0;
+    height: 0;
+    background: transparent;
+    border: 3px solid transparent;
+}
+
+aside:hover::before {
+    animation-name: animateBorder;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animateBorder {
+    0% {
+        width: 0;
+        height: 0;
+        border-top-color: #0098ff;
+        border-right-color: transparent;
+        border-left-color: transparent;
+        border-bottom-color: transparent;
+    }
+    50% {
+        width: 100%;
+        height: 0;
+        border-top-color: #0098ff;
+        border-right-color: #0098ff;
+        border-left-color: transparent;
+        border-bottom-color: transparent;
+    }
+    100% {
+        width: 100%;
+        height: 100%;
+        border-top-color: #0098ff;
+        border-right-color: #0098ff;
+        border-left-color: transparent;
+        border-bottom-color: transparent;
+    }
+}
+
+aside::after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 0;
+    height: 0;
+    background: transparent;
+    border: 3px solid transparent;
+}
+
+aside:hover::after {
+    animation-name: animateBorder2;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animateBorder2 {
+    0% {
+        width: 0;
+        height: 0;
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-left-color: transparent;
+        border-bottom-color: #262626;
+    }
+    50% {
+        width: 0;
+        height: 100%;
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-left-color: #262626;
+        border-bottom-color: #262626;
+    }
+    100% {
+        width: 100%;
+        height: 100%;
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-left-color: #262626;
+        border-bottom-color: #262626;
+    }
+}
 
 .aside-animate {
     animation-name: asideMove;
@@ -252,7 +343,7 @@ aside {
 
 .image-circle {
     border-radius: 6px;
-    box-shadow: 10px 10px 49px 0px rgba(143,143,143,1);
+    box-shadow: 10px 10px 49px 0px rgba(143, 143, 143, 1);
 }
 
 #in-wrapper {
@@ -275,7 +366,7 @@ aside {
     ;
 }
 
-.one-of-third img{
+.one-of-third img {
     height: 340px;
     width: 100%;
 }
@@ -294,6 +385,7 @@ h5 a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 8px 8px 40px 0px;
 }
 
 .one-third-img {
@@ -351,19 +443,18 @@ footer a {
     }
 }
 
-.google{
+.google {
     transition: color .5s linear;
     &:hover {
-        color:  #d34836;
+        color: #d34836;
     }
 }
 
-.youtube{
+.youtube {
     transition: color .5s linear;
     display: block;
     &:hover {
-        color:  #e52d27;
-        
+        color: #e52d27;
     }
 }
 
@@ -371,7 +462,7 @@ footer a {
     font-size: 355%;
     padding: 2% 6%;
     padding-bottom: 60px;
-    color:#ffffff;
+    color: #ffffff;
 }
 
 .current {
@@ -379,10 +470,9 @@ footer a {
 }
 
 .slider {
-//    margin-top: 84px;
+    //    margin-top: 84px;
     position: relative;
 }
-
 
 .bx-controls {
     display: none;
@@ -408,12 +498,13 @@ footer a {
     h1 {
         font-size: 100%;
     }
-}
-
-@media screen and (max-width:768px) {
-    
-  
-   
+    .rslides img {
+        display: block;
+        height: 600px !important;
+        float: left;
+        width: 100%;
+        border: 0;
+    }
     h1 {
         font-size: 70%;
     }
@@ -448,11 +539,10 @@ footer a {
         text-align: center;
         margin: 0;
     }
-    
-    .one-of-third img{
-    height: auto;
-    width: 100%;
-}
+    .one-of-third img {
+        height: auto;
+        width: 100%;
+    }
     .circle {
         width: 100px;
         height: 100px;
@@ -468,7 +558,6 @@ footer a {
     aside {
         width: 100%;
         margin-right: 0;
-        
     }
     h4 {
         font-size: 140%;
@@ -478,8 +567,6 @@ footer a {
         margin: 0;
     }
 }
-
-
 
 @media screen and (max-width: 478px) {
     h3 {
@@ -561,8 +648,6 @@ footer a {
     }
 }
 
-
-
 @keyframes boxIco {
     0% {
         opacity: 0;
@@ -584,136 +669,121 @@ footer a {
     }
 }
 
-
-
-.about,.facility,.pricing {
+.about,
+.facility,
+.pricing {
     padding: 0px;
     margin-bottom: 0px;
-    font-size:150%;
+    font-size: 150%;
     text-align: center;
-    margin-left:auto;
+    margin-left: auto;
     margin-right: auto;
     width: auto;
     float: left;
     margin-left: 10px;
-   
-    }
+}
 
-
-.animated-header{
-     p{
+.animated-header {
+    p {
         position: relative;
-        &:after{
-                width: 0px;
-                height: 2px;
-                position: absolute;
-                background-color: #0098ff;
-                content: "";
-                left: 0px;
-                top:33px;
-                animation-name: lineAnim;
-                animation-duration: 0.6s;
-                animation-delay: 200ms;
-                animation-fill-mode: forwards;
-                animation-timing-function: ease-in-out;
+        &:after {
+            width: 0px;
+            height: 2px;
+            position: absolute;
+            background-color: #0098ff;
+            content: "";
+            left: 0px;
+            top: 33px;
+            animation-name: lineAnim;
+            animation-duration: 0.6s;
+            animation-delay: 200ms;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease-in-out;
         }
     }
 }
 
-#footer-third h3{
+#footer-third h3 {
     position: relative;
     width: 200px;
     margin-left: auto;
     margin-right: auto;
-        &:after{
-                width: 0px;
-                height: 2px;
-                position: absolute;
-                background-color: #0098ff;
-                content: "";
-                left: 0px;
-                top:33px;
-                animation-name: lineAnim;
-                animation-duration: 0.6s;
-                animation-delay: 1s;
-                animation-fill-mode: forwards;
-                animation-timing-function: ease-in-out;
-        }
+    &:after {
+        width: 0px;
+        height: 2px;
+        position: absolute;
+        background-color: #0098ff;
+        content: "";
+        left: 0px;
+        top: 33px;
+        animation-name: lineAnim;
+        animation-duration: 0.6s;
+        animation-delay: 1s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in-out;
+    }
 }
 
-::-webkit-scrollbar
-{
-  width: 6px;  /* for vertical scrollbars */
-  height: 8px; /* for horizontal scrollbars */
+::-webkit-scrollbar {
+    width: 6px;
+    /* for vertical scrollbars */
+    height: 8px;
+    /* for horizontal scrollbars */
 }
 
-::-webkit-scrollbar-track
-{
-  background: transparent;
-   
-    
+::-webkit-scrollbar-track {
+    background: transparent;
 }
 
-
-::-webkit-scrollbar-thumb
-{
-  background: #0098ff;
+::-webkit-scrollbar-thumb {
+    background: #0098ff;
 }
 
-
-.animated-house-img{
+.animated-house-img {
     animation-name: houseImgAnim;
     animation-duration: 1000ms;
     animation-fill-mode: forwards;
-    animation-timing-function:ease-in;
-    
+    animation-timing-function: ease-in;
 }
 
-@keyframes houseImgAnim{
-    0%{
+@keyframes houseImgAnim {
+    0% {
         opacity: 0;
-            
     }
-    100%{
+    100% {
         opacity: 1;
     }
 }
 
-.houses-img{
+.houses-img {
     position: relative;
     opacity: 0;
-    p{
+    p {
         position: absolute;
-        top:0px;
+        top: 0px;
         background-color: rgba(237, 237, 237, 0.5);
         width: 150px;
         text-align: center;
     }
 }
 
-
-
-
-
-
-.houses-img img{
-    box-shadow: 10px 10px 49px 0px rgba(143,143,143,1);
+.houses-img img {
+    box-shadow: 10px 10px 49px 0px rgba(143, 143, 143, 1);
     border-radius: 8px;
 }
-
 
 .spinner {
     width: 80px;
     height: 80px;
     border: 2px solid white;
-    border-top:3px solid red;
-    border-radius:100%;
+    border-top: 3px solid red;
+    border-radius: 100%;
     z-index: 2000;
     position: absolute;
-    top:0;
+    top: 0;
     bottom: 0;
-    left:0;
-    right:0;
+    left: 0;
+    right: 0;
     margin: auto;
     animation-name: spinner;
     animation-delay: 0s;
@@ -721,26 +791,28 @@ footer a {
     animation-iteration-count: infinite;
 }
 
-
 @keyframes spinner {
-    0%{
+    0% {
         transform: rotate(0deg);
     }
-    100%{
+    100% {
         transform: rotate(360deg);
     }
 }
 
-#spinner-page{
+#spinner-page {
     height: 100%;
     width: 100%;
-//    background-color: rgba(0, 152, 255, 0.6);
+    //    background-color: rgba(0, 152, 255, 0.6);
     position: fixed;
     left: 0;
-    top:0;
+    top: 0;
     z-index: 9999;
 }
 
-
-
-
+.offer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}

@@ -258,7 +258,8 @@ article {
   padding: 4%;
   float: left;
   width: 50%;
-  opacity: 0; }
+  opacity: 0;
+  margin-top: 5px; }
 
 @-webkit-keyframes circleMove {
   0% {
@@ -296,9 +297,151 @@ aside {
   opacity: 0;
   float: right;
   width: 35%;
-  padding: 4%;
+  padding: 3%;
   text-align: center;
-  margin-right: 100px; }
+  margin-right: 100px;
+  position: relative;
+  border: 1px solid #5c5c5c;
+  position: relative;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer; }
+
+aside:hover {
+  border: 1px solid transparent;
+  transition: 1000ms ease-in; }
+
+aside::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: 0;
+  height: 0;
+  background: transparent;
+  border: 3px solid transparent; }
+
+aside:hover::before {
+  -webkit-animation-name: animateBorder;
+  animation-name: animateBorder;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards; }
+
+@-webkit-keyframes animateBorder {
+  0% {
+    width: 0;
+    height: 0;
+    border-top-color: #0098ff;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    border-bottom-color: transparent; }
+  50% {
+    width: 100%;
+    height: 0;
+    border-top-color: #0098ff;
+    border-right-color: #0098ff;
+    border-left-color: transparent;
+    border-bottom-color: transparent; }
+  100% {
+    width: 100%;
+    height: 100%;
+    border-top-color: #0098ff;
+    border-right-color: #0098ff;
+    border-left-color: transparent;
+    border-bottom-color: transparent; } }
+
+@keyframes animateBorder {
+  0% {
+    width: 0;
+    height: 0;
+    border-top-color: #0098ff;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    border-bottom-color: transparent; }
+  50% {
+    width: 100%;
+    height: 0;
+    border-top-color: #0098ff;
+    border-right-color: #0098ff;
+    border-left-color: transparent;
+    border-bottom-color: transparent; }
+  100% {
+    width: 100%;
+    height: 100%;
+    border-top-color: #0098ff;
+    border-right-color: #0098ff;
+    border-left-color: transparent;
+    border-bottom-color: transparent; } }
+
+aside::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: 0;
+  height: 0;
+  background: transparent;
+  border: 3px solid transparent; }
+
+aside:hover::after {
+  -webkit-animation-name: animateBorder2;
+  animation-name: animateBorder2;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards; }
+
+@-webkit-keyframes animateBorder2 {
+  0% {
+    width: 0;
+    height: 0;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    border-bottom-color: #262626; }
+  50% {
+    width: 0;
+    height: 100%;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-left-color: #262626;
+    border-bottom-color: #262626; }
+  100% {
+    width: 100%;
+    height: 100%;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-left-color: #262626;
+    border-bottom-color: #262626; } }
+
+@keyframes animateBorder2 {
+  0% {
+    width: 0;
+    height: 0;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    border-bottom-color: #262626; }
+  50% {
+    width: 0;
+    height: 100%;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-left-color: #262626;
+    border-bottom-color: #262626; }
+  100% {
+    width: 100%;
+    height: 100%;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-left-color: #262626;
+    border-bottom-color: #262626; } }
 
 .aside-animate {
   -webkit-animation-name: asideMove;
@@ -373,7 +516,8 @@ h5 a:hover {
   justify-content: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
-  align-items: center; }
+  align-items: center;
+  box-shadow: 8px 8px 40px 0px; }
 
 .one-third-img {
   padding-bottom: 2%; }
@@ -464,9 +608,13 @@ footer a {
 
 @media screen and (max-width: 840px) {
   h1 {
-    font-size: 100%; } }
-
-@media screen and (max-width: 768px) {
+    font-size: 100%; }
+  .rslides img {
+    display: block;
+    height: 600px !important;
+    float: left;
+    width: 100%;
+    border: 0; }
   h1 {
     font-size: 70%; }
   header {
@@ -626,7 +774,9 @@ footer a {
     -webkit-transform: scale(1);
     transform: scale(1); } }
 
-.about, .facility, .pricing {
+.about,
+.facility,
+.pricing {
   padding: 0px;
   margin-bottom: 0px;
   font-size: 150%;
@@ -775,3 +925,17 @@ footer a {
   left: 0;
   top: 0;
   z-index: 9999; }
+
+.offer {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
