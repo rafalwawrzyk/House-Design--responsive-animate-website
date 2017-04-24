@@ -30,7 +30,9 @@ $('.facility').waypoint(function(){
 },{offset:'0%'})
 
 
+//scroll smooth
 
+$.localScroll();
 
 
 

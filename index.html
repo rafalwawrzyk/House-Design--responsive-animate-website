@@ -21,7 +21,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
     <script src="js/script.js"></script>
     <script src="ResponsiveSlides.js-master/responsiveslides.min.js"></script>
-    <script src="//cdn.jsdelivr.net/jquery.localscroll/1.4.0/jquery.localScroll.min.js"></script>
+    <script src="http://cdn.jsdelivr.net/jquery.scrollto/2.1.2/jquery.scrollTo.min.js"></script>
+    <script src="http://cdn.jsdelivr.net/jquery.localscroll/1.4.0/jquery.localScroll.min.js"></script>
 
 
 
@@ -31,7 +32,7 @@
 <body>
     <header>
         <div id="header-main">
-            <a href="index.html" id="logo">
+            <a href="#home" id="logo">
                 <h3>House+<br>
                     <span class="design">design</span></h3>
 
@@ -40,17 +41,17 @@
                 <a href="#" id="menu-icons"><i class="fa fa-bars hamburger" aria-hidden="true"></i></a>
                 <ul>
                     <li><a href="index.html" class="home">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Offer</a></li>
-                    <li><a href="#">Pricing</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#offer">Offer</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#footer">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
 
-    <div class="slider-container">
+    <div class="slider-container" id="home">
         <section class="slider">
             <!--
           <div class="header-text">
@@ -76,7 +77,7 @@
     <div id="in-wrapper">
 
 
-        <section class="about">
+        <section class="about" id="about">
             <p>About</p>
         </section>
         <div class="clearfix"></div>
@@ -107,7 +108,7 @@
             <p>Every project we make must be breath taking. We are making the best projects in the world. Don't believe? You can check us </p>
 
         </section>
-        <section class="facility">
+        <section class="facility" id="offer">
             <p>Offer</p>
         </section>
         <div class="clearfix"></div>
@@ -136,7 +137,7 @@
         </section>
         
         <div class="clearfix"></div>
-        <section class="pricing">
+        <section class="pricing" id="pricing">
             <p>Pricing</p>
         </section>
         <div class="clearfix"></div>
