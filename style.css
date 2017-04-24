@@ -883,9 +883,10 @@ footer a {
 .spinner {
   width: 80px;
   height: 80px;
-  border: 2px solid white;
+  border: 5px solid white;
   border-top: 3px solid red;
   border-radius: 100%;
+  background-color: rgba(227, 227, 227, 0.5);
   z-index: 2000;
   position: absolute;
   top: 0;
